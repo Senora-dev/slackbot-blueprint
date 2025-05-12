@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { createPageUrl } from './utils';
+import { createPageUrl } from '../lib/utils';
 
 export default function Layout({ children, currentPageName }) {
   // Simplified layout without authentication requirements
