@@ -5,7 +5,7 @@ import path from 'path'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/base44-app/',
+  base: '/slackbot-blueprint/',
   server: {
     allowedHosts: true
   },
