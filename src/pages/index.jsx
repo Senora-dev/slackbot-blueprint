@@ -1,17 +1,11 @@
 import Layout from "./Layout.jsx";
-
 import LandingPage from "./LandingPage";
-
 import ProjectFiles from "./ProjectFiles";
-
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
-    
     LandingPage: LandingPage,
-    
     ProjectFiles: ProjectFiles,
-    
 }
 
 function _getCurrentPage(url) {
@@ -35,14 +29,11 @@ function PagesContent() {
     return (
         <Layout currentPageName={currentPage}>
             <Routes>            
-                
-                    <Route path="/" element={<LandingPage />} />
-                
-                
+                <Route path="/" element={<LandingPage />} />
                 <Route path="/LandingPage" element={<LandingPage />} />
-                
                 <Route path="/ProjectFiles" element={<ProjectFiles />} />
-                
+                {/* Add a catch-all route to handle any unmatched paths */}
+                <Route path="*" element={<LandingPage />} />
             </Routes>
         </Layout>
     );
